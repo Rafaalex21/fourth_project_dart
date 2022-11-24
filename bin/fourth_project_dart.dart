@@ -20,8 +20,14 @@ void functionOne() {
     e.toString();
   }
 
-  on HttpException catch (e) {
-    e.toString();
+  // on HttpException catch (e) {
+  //   e.toString();
+  // }
+  catch (exception, stackTrace){
+    print(exception);
+    print(stackTrace);
+  }finally{
+    print('finally');
   }
   print('Finished F01');
 }
