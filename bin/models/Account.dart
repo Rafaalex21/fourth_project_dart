@@ -2,11 +2,12 @@ class Account {
   String name;
   double balance;
   bool isAuthenticated;
+  DateTime? createdAt;
 
   Account(
       {required this.name,
       required this.balance,
-      required this.isAuthenticated}):
+      required this.isAuthenticated, this.createdAt}):
       assert(name.isNotEmpty, ' o nome não pode ser vazio'),
       assert(balance >= 0,'saldo não pode ser negativo');
 
